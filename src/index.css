@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sidebarBg: #141A26;
+  --color-brandRed: #a4130d;
+  --color-brandOrange: #C2613A;
+  --color-brandGold: #BE9354;
+  --color-brandTeal: #BF2A2A;
+  --color-brandBlue: #3B590C;
+  --color-brandDeepBlue: #500603;
+  --color-brandMuted: #868077;
+  --color-brandSage: #D1C6B4;
+  --color-textMain: #3F4859;
+  --color-surface: #F2F0E4;
+  --color-bgPage: #F2F0EB;
+
+  --font-sans: "JetBrains Mono", "Noto Sans Thai", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-brand: "Inter", "Noto Sans Thai", sans-serif;
+
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.04);
+  --shadow-grand: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --shadow-glow-red: 0 0 15px rgba(164, 19, 13, 0.3);
+  --shadow-glow-teal: 0 0 15px rgba(191, 42, 42, 0.3);
+
+  --animate-shimmer: shimmer 1.5s infinite;
+  --animate-fadeIn: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+body {
+  background-color: var(--color-bgPage);
+  color: var(--color-textMain);
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(191, 42, 42, 0.2); border-radius: 20px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #BF2A2A; }
+
+input, button, span, div, h1, h2, h3, h4, p {
+  font-variant-numeric: tabular-nums;
+}

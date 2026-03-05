@@ -1,0 +1,5 @@
+{
+  "name": "QA&QC MASTER",
+  "description": "A multi-tenant SaaS application using React as a single frontend and Google Sheets as a distributed backend.",
+  "requestFramePermissions": []
+}
